@@ -6,12 +6,12 @@ const updateUser = async (req, res = response) => {
 
   try {
     // Verificar si el usuario está intentando actualizar la propiedad 'admin'
-    if (newData.hasOwnProperty("admin")) {
-      // Si intenta actualizar la propiedad 'admin', devolver un error 404
-      return res
-        .status(404)
-        .json({ error: "No se puede actualizar la propiedad 'admin'" });
-    }
+    // if (newData.hasOwnProperty("admin")) {
+    //   // Si intenta actualizar la propiedad 'admin', devolver un error 404
+    //   return res
+    //     .status(404)
+    //     .json({ error: "No se puede actualizar la propiedad 'admin'" });
+    // }
 
     // Buscar el usuario por su ID y actualizarlo con los nuevos datos
     const user = await User.findByIdAndUpdate(uid, newData, { new: true });
@@ -22,12 +22,12 @@ const updateUser = async (req, res = response) => {
     }
 
     // Identificar las propiedades actualizadas
-    const updatedFields = {};
-    for (const key in newData) {
-      if (newData.hasOwnProperty(key) && user[key] !== newData[key]) {
-        updatedFields[key] = newData[key];
-      }
-    }
+    // const updatedFields = {};
+    // for (const key in newData) {
+    //   if (newData.hasOwnProperty(key) && user[key] !== newData[key]) {
+    //     updatedFields[key] = newData[key];
+    //   }
+    // }
 
     // Eliminar la contraseña del objeto de usuario
     delete user.password;

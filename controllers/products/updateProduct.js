@@ -1,7 +1,7 @@
 const Products = require("../../models/Products");
 const User = require("../../models/User");
 
-const updateProduct = async (req, res = response) => {
+const updateProduct = async (req, res ) => {
   const { uid, productId } = req.params; // Obtener el ID del producto de los parámetros de la URL
   const { newData } = req.body; // Obtener los datos actualizados del producto de la solicitud
 
