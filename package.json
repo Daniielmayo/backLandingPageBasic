@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "check": "node --check app.js",
+    "check": "node --check api/index.js",
     "build": "npm run lint && npm run check",
-    "dev": "node --env-file .env --watch app.js"
+    "dev": "node --env-file .env --watch api/index.js",
+    "start": "node api/p.js"
   },
   "keywords": [],
   "author": "",
