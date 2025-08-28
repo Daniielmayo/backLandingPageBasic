@@ -216,4 +216,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,windows,macos,linux
+# End of https://www.toptal.com/developers/gitignore/api/node,windows,macos,linu
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
