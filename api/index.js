@@ -28,3 +28,5 @@ app.use("/api/products", ProductsUserRoute);
 app.listen(process.env.PORT, () => {
   console.log(`Listening port ${process.env.PORT}`);
 });
+
+module.exports = app;
